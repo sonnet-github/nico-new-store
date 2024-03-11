@@ -5,45 +5,45 @@
     "footer": {
       "type": "footer",
       "blocks": {
-        "footer-0": {
-          "type": "link_list",
+        "social_link_mpN7zi": {
+          "type": "social_link",
           "settings": {
-            "heading": "Quick links",
-            "menu": "footer"
+            "social_media_type": "facebook",
+            "social_media_url": "#"
           }
         },
-        "footer-1": {
-          "type": "link_list",
+        "social_link_GUgCQK": {
+          "type": "social_link",
           "settings": {
-            "heading": "Info",
-            "menu": "footer"
+            "social_media_type": "twitter",
+            "social_media_url": "#"
           }
         },
-        "footer-2": {
-          "type": "text",
+        "social_link_K4aFz8": {
+          "type": "social_link",
           "settings": {
-            "heading": "Our mission",
-            "subtext": "<p>Share contact information, store details, and brand content with your customers.<\/p>"
+            "social_media_type": "instagram",
+            "social_media_url": "#"
+          }
+        },
+        "social_link_NQVipm": {
+          "type": "social_link",
+          "settings": {
+            "social_media_type": "youtube",
+            "social_media_url": "#"
           }
         }
       },
       "block_order": [
-        "footer-0",
-        "footer-1",
-        "footer-2"
+        "social_link_mpN7zi",
+        "social_link_GUgCQK",
+        "social_link_K4aFz8",
+        "social_link_NQVipm"
       ],
       "settings": {
-        "color_scheme": "scheme-1",
-        "newsletter_enable": true,
-        "newsletter_heading": "Subscribe to our emails",
-        "show_social": true,
-        "enable_country_selector": false,
-        "enable_language_selector": false,
-        "payment_enable": true,
-        "show_policy": false,
-        "margin_top": 48,
-        "padding_top": 36,
-        "padding_bottom": 36
+        "footer_menu": "main-menu",
+        "footer_text": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "footer_logo": "shopify:\/\/shop_images\/sonnet.png"
       }
     }
   },
