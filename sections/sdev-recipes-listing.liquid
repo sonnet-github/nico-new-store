@@ -8,7 +8,7 @@
           {{ recipe.content | metafield_tag }}
         </div>
         <div class="ingredients">
-          {% for ing in recipe.ingredients.values %}
+          {% for ing in recipe.ingredients %}
             {{ ing }}
           {% endfor %}
         </div>
