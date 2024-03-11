@@ -1,7 +1,13 @@
 {
   "sections": {
+    "recipe_listing_aUfez4": {
+      "type": "recipe-listing",
+      "settings": {
+        "recipe_main_title": ""
+      }
+    }
   },
   "order": [
-
+    "recipe_listing_aUfez4"
   ]
 }
