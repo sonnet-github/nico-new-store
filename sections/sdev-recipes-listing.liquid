@@ -1,6 +1,22 @@
+<div class="recipe-list">
+  {% assign recipes = metaobject.recipes %}
+  {% if recipes != blank %}
+    {% for recipe in recipes %}
+      <div class="recipe-col">
+        <h4>{{ recipe.title | escape }}</h4>
+      </div>
+    {% endfor %}
+  {% endif %}
+</div>
+
 {% schema %}
   {
-    "name": "Section name",
-    "settings": []
+    "name": "Recipes listing",
+    "settings": [],
+    "presets": [
+      {
+    "name": "Recipes listing"
+      }
+    ]
   }
 {% endschema %}
