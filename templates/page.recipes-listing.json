@@ -6,9 +6,15 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "sdev_recipes_listing_qUNinE": {
+      "type": "sdev-recipes-listing",
+      "settings": {
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "sdev_recipes_listing_qUNinE"
   ]
 }
