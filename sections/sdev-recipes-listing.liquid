@@ -5,7 +5,7 @@
       <div class="recipe-col">
         <h4>{{ recipe.title | escape }}</h4>
         <div class="rte">
-          {{ recipe.content }}
+          {{ recipe.content | metafield_tag }}
         </div>
       </div>
     {% endfor %}
