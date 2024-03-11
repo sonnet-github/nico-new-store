@@ -1,0 +1,6 @@
+{% assign recipes = shop.metaobjects.recipes.values %}
+jtrm
+{% for recipe in recipes %}
+  {{ recipe.title | escape }}
+  {{ recipe.content | metafield_tag }}
+{% endfor %}
