@@ -4,6 +4,9 @@
     {% for recipe in recipes %}
       <div class="recipe-col">
         <h4>{{ recipe.title | escape }}</h4>
+        <div class="rte">
+          {{ recipe.content }}
+        </div>
       </div>
     {% endfor %}
   {% endif %}
