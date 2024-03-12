@@ -1,6 +1,29 @@
 <section class="recipe-listing">
   <div class="container">
     <h2>Recipe Listing</h2>
+    {% assign recipes = shop.metaobjects.reipes.values %}
+
+    {% if recipes != blank %}
+      <div class="recipe-list">
+        {% for recipe in recipes %}
+          
+          <div class="recipe-item">
+            <div class="recipe-item-inner">
+              <div class="canvas-img recipe-img">
+                <canvas width="400" height="320"></canvas>
+                <img src="{{ recipe.featured_image | image_url:  width: 400, height: 320 }}" width="auto" height="auto">
+              </div>
+              <div class="recipe-content">
+                <h3>{{ recipe.title }}</h3>
+                {{ recipe.content | metafield_tag}}
+                <a href="{{ recipe.system.url }}" class="recipe-read-more">Read more</a>
+              </div>
+            </div>
+          </div>
+
+        {% endfor %}
+      </div>
+    {% endif %}
   </div>
 </section>
 
