@@ -6,9 +6,16 @@
         "padding_top": 28,
         "padding_bottom": 28
       }
+    },
+    "recipe_listing_7tM9dU": {
+      "type": "recipe-listing",
+      "settings": {
+        "recipe_main_title": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "recipe_listing_7tM9dU"
   ]
 }
