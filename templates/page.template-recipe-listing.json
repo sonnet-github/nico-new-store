@@ -7,7 +7,7 @@
         "padding_bottom": 28
       }
     },
-    "recipe_listing_7tM9dU": {
+    "recipe_listing_mB7Hif": {
       "type": "recipe-listing",
       "settings": {
         "recipe_main_title": ""
@@ -16,6 +16,6 @@
   },
   "order": [
     "main",
-    "recipe_listing_7tM9dU"
+    "recipe_listing_mB7Hif"
   ]
 }
