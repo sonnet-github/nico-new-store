@@ -1,8 +1,49 @@
 <section class="single-recipe">
     <div class="container">
-        <h1>{{ metaobject.title }}</h1>
+        <div class="sr-row">
+            <div class="sr-left">
+                <div class="canvas-img sr-banner">
+                    <canvas width="400" height="600"></canvas>
+                    <img src="{{ metaobject.featured_image | image_url:  width: 400, height: 320 }}" width="auto" height="auto">
+                </div>
+            </div>
+            <div class="sr-right">
+                <h1>{{ metaobject.title }}</h1>
+                <small>{{ metaobject.cook_time }}</small>
+
+                <div class="sr-content">
+                    {{ metaobject.content | metafield_tag}}
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="sr-ingredients">
+        <div class="container">
+            <div class="sr-ingredients-col">
+                <h2>Ingredients</h2>
+                {% if metaobject.ingredients.value != blank%}
+                <ul>
+                    {% for ingredient in metaobject.ingredients.value %}
+                        <li>{{ ingredient }}</li>
+                    {% endfor %}
+                </ul>
+                {% endif %}
+            </div>
+            <div class="single-instructions-col">
+                <h2>instructions</h2>
+                {% if metaobject.intructions.value != blank%}
+                    <ol>
+                        {% for instruction in metaobject.intructions.value %}
+                            <li>{{ instruction }}</li>
+                        {% endfor %}
+                    </ol>
+                    {% endif %}
+            </div>
+        </div>
     </div>
 </section>
+
   
   {% schema %}
     {
@@ -13,4 +54,4 @@
         }
       ]
     }
-  {% endschema %}
+  {% endschema %}1
