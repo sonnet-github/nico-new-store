@@ -2,12 +2,19 @@
   "sections": {
     "recipe_listing_aUfez4": {
       "type": "recipe-listing",
+      "disabled": true,
       "settings": {
         "recipe_main_title": ""
+      }
+    },
+    "single_recipe_nbjzxX": {
+      "type": "single-recipe",
+      "settings": {
       }
     }
   },
   "order": [
-    "recipe_listing_aUfez4"
+    "recipe_listing_aUfez4",
+    "single_recipe_nbjzxX"
   ]
 }
