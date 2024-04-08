@@ -1,3 +1,5 @@
+{{ 'section-contact-form.css' | asset_url | stylesheet_tag }}
+
 <section class="get-in-touch">
     <div class="container">
 
@@ -5,7 +7,7 @@
           <h2>{{ section.settings.git_title }}</h2>
         {% endif %}
 
-        <div class="git-form">
+        <div class="contact git-form">
             {% form 'contact' %}
                 {{ form.errors | default_errors }}
 
@@ -13,7 +15,11 @@
 
                   {% if block.type == 'field' %}
 
-                    <div class="git-field">
+                    <div class="field git-field">
+
+  
+
+                      {% assign fieldType = block.settings.field_type %}
 
                       {% if block.settings.field_label != blank %}
 
@@ -23,29 +29,36 @@
                           {% assign fieldId = block.settings.field_id | replace: ' ', '_' | downcase%}
                         {% endif %}
 
-                        <label for="{{ fieldId  }}">{{ block.settings.field_label }}</label>
+                        <label for="{{ fieldId  }}" class="form__label field__label">{{ block.settings.field_label }}</label>
                       {% endif %}
-
-                      {% assign fieldType = block.settings.field_type %}
 
                       {% case fieldType %}
                         {% when 'text' %}
 
-                          <input type="text" id="{{ fieldId }}" name="contact[{{ fieldId }}]">
+                          <input type="text" id="{{ fieldId }}" name="contact[{{ fieldId }}]" class="field__input" placeholder={{ block.settings.field_label }}>
 
                         {% when 'textarea' %}
 
-                          <textarea id={{ fieldId }} name="contact[{{ fieldId }}]"></textarea>
+                          <textarea id={{ fieldId }} name="contact[{{ fieldId }}]" class="field__input" placeholder={{ block.settings.field_label }} style="height: 130px;"></textarea>
 
                         {% when 'email' %}
 
-                          <input type="email" id={{ fieldId }} name="contact[{{ fieldId }}]">
+                          <input type="email" id={{ fieldId }} name="contact[{{ fieldId }}]" class="field__input" placeholder={{ block.settings.field_label }}>
 
                         {% when 'phone' %}
 
-                          <input type="tel" id={{ fieldId }} name="contact[{{ fieldId }}]">
+                          <input type="tel" id={{ fieldId }} name="contact[{{ fieldId }}]" class="field__input" placeholder={{ block.settings.field_label }}>
+
+                        {% when 'date' %}
+
+                          <input type="date" id={{ fieldId }} name="contact[{{ fieldId }}]" class="field__input"/>
 
                       {% endcase %}
+
+                      {% if block.settings.field_label != blank %}
+
+                        <label for="{{ fieldId  }}" class="form__label field__label">{{ block.settings.field_label }}</label>
+                      {% endif %}
 
                     </div>
                   {% endif %}
@@ -53,8 +66,10 @@
                 {% endfor %}  
               
               
-                <div class="submit">
-                  <input type="submit" value="Create" />
+                <div class="submit contact__button">
+                  <button type="submit" class="button">
+                    Create
+                  </button>
                 </div>
                 
               {% endform %}
@@ -108,6 +123,10 @@
               {
                 "label": "Phone",
                 "value": "phone"
+              },
+              {
+                "label": "Date",
+                "value": "date"
               }
             ] 
           }
